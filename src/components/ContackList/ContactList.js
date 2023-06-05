@@ -1,7 +1,7 @@
-import React from 'react';
 import { ContactListItem } from './ContactList.styled';
 
-const ContactList = ({contacts, onDeleteContact}) => (                                                             
+export default function ContactList({contacts, onDeleteContact}) {
+  return (                                                             
   <ul>
     {contacts.map(({id, name, number}) => (
         <ContactListItem key={id}>
@@ -10,6 +10,4 @@ const ContactList = ({contacts, onDeleteContact}) => (
         </ContactListItem>
     ))}
   </ul>
-);
-
-export default ContactList
+)};
