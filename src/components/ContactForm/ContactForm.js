@@ -9,10 +9,10 @@ export default function ContactForm({onSubmitForm}) {
   const handleOnChange = e => {
     const {value} = e.currentTarget
     if(e.currentTarget.name === 'name') {
-      setName(state => value)
+      setName(value)
     }
     if(e.currentTarget.name === 'number') {
-      setNumber(state => value)
+      setNumber(value)
     }        
   };
 

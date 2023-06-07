@@ -48,7 +48,7 @@ export default function App() {
 
   const onFilter = e => {
     const prevState = e.currentTarget.value
-    setFilter(state => prevState)
+    setFilter(prevState)
   }
 
   const visibleContacts = () => {
