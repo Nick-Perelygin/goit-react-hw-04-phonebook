@@ -33,15 +33,15 @@ export default function App() {
       number: data.number,
     };
 
-    const filterResult = contacts.filter(prevContact =>
+    const filterResult = contacts.find(prevContact =>
       prevContact.name.toLowerCase().trim() ===
       contact.name.toLowerCase().trim() ||
       prevContact.number.trim() === contact.number.trim()
     )
 
-    filterResult.length 
-    ? alert(`${contact.name}: is already in contacts`)
-    : setContacts(prevState => {
+    if(filterResult)
+    alert(`${contact.name}: is already in contacts`)
+    else setContacts(prevState => {
       return [contact, ...prevState];
     });
   }
